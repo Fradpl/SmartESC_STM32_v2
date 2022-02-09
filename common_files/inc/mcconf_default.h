@@ -36,16 +36,16 @@
 
 // Limits
 #ifndef MCCONF_L_CURRENT_MAX
-#define MCCONF_L_CURRENT_MAX			30.0	// Current limit in Amperes (Upper)
+#define MCCONF_L_CURRENT_MAX			55.0	// Current limit in Amperes (Upper)
 #endif
 #ifndef MCCONF_L_CURRENT_MIN
-#define MCCONF_L_CURRENT_MIN			-30.0	// Current limit in Amperes (Lower)
+#define MCCONF_L_CURRENT_MIN			-55.0	// Current limit in Amperes (Lower)
 #endif
 #ifndef MCCONF_L_IN_CURRENT_MAX
 #define MCCONF_L_IN_CURRENT_MAX			20.0	// Input current limit in Amperes (Upper)
 #endif
 #ifndef MCCONF_L_IN_CURRENT_MIN
-#define MCCONF_L_IN_CURRENT_MIN			-20.0	// Input current limit in Amperes (Lower)
+#define MCCONF_L_IN_CURRENT_MIN			-10.0	// Input current limit in Amperes (Lower)
 #endif
 #ifndef MCCONF_L_MAX_ABS_CURRENT
 #define MCCONF_L_MAX_ABS_CURRENT		60.0	// The maximum absolute current above which a fault is generated
@@ -60,7 +60,7 @@
 #define MCCONF_L_BATTERY_CUT_START		34.0	// Start limiting the positive current at this voltage
 #endif
 #ifndef MCCONF_L_BATTERY_CUT_END
-#define MCCONF_L_BATTERY_CUT_END		30.0		// Limit the positive current completely at this voltage
+#define MCCONF_L_BATTERY_CUT_END		31.0		// Limit the positive current completely at this voltage
 #endif
 #ifndef MCCONF_L_RPM_MAX
 #define MCCONF_L_RPM_MAX				60000.0	// The motor speed limit (Upper)
@@ -75,7 +75,7 @@
 #define MCCONF_L_SLOW_ABS_OVERCURRENT	true	// Use the filtered (and hence slower) current for the overcurrent fault detection
 #endif
 #ifndef MCCONF_L_MIN_DUTY
-#define MCCONF_L_MIN_DUTY				0.00	// Minimum duty cycle
+#define MCCONF_L_MIN_DUTY				0.05	// Minimum duty cycle
 #endif
 #ifndef MCCONF_L_MAX_DUTY
 #define MCCONF_L_MAX_DUTY				0.99	// Maximum duty cycle
@@ -87,10 +87,10 @@
 #define MCCONF_L_CURR_MAX_RPM_FBRAKE_CC	1500	// Maximum electrical RPM to use full brake at with current control
 #endif
 #ifndef MCCONF_L_LIM_TEMP_FET_START
-#define MCCONF_L_LIM_TEMP_FET_START		65.0	// MOSFET temperature where current limiting should begin
+#define MCCONF_L_LIM_TEMP_FET_START		75.0	// MOSFET temperature where current limiting should begin
 #endif
 #ifndef MCCONF_L_LIM_TEMP_FET_END
-#define MCCONF_L_LIM_TEMP_FET_END		75.0	// MOSFET temperature where everything should be shut off
+#define MCCONF_L_LIM_TEMP_FET_END		85.0	// MOSFET temperature where everything should be shut off
 #endif
 #ifndef MCCONF_L_LIM_TEMP_MOTOR_START
 #define MCCONF_L_LIM_TEMP_MOTOR_START	0.0	// MOTOR temperature where current limiting should begin
@@ -119,10 +119,10 @@
 
 // Speed PID parameters
 #ifndef MCCONF_S_PID_KP
-#define MCCONF_S_PID_KP					2	// Proportional gain
+#define MCCONF_S_PID_KP					12	// Proportional gain
 #endif
 #ifndef MCCONF_S_PID_KI
-#define MCCONF_S_PID_KI					5	// Integral gain
+#define MCCONF_S_PID_KI					30	// Integral gain
 #endif
 #ifndef MCCONF_S_PID_KD
 #define MCCONF_S_PID_KD					0.0	// Derivative gain
@@ -162,7 +162,7 @@
 #define MCCONF_CC_GAIN					0.0046	// Current controller error gain
 #endif
 #ifndef MCCONF_CC_MIN_CURRENT
-#define MCCONF_CC_MIN_CURRENT			0.05	// Minimum allowed current
+#define MCCONF_CC_MIN_CURRENT			0.00	// Minimum allowed current
 #endif
 #ifndef MCCONF_CC_STARTUP_BOOST_DUTY
 #define MCCONF_CC_STARTUP_BOOST_DUTY	0.01	// The lowest duty cycle to use in current control mode (has to be > MCPWM_MIN_DUTY_CYCLE)
@@ -225,10 +225,10 @@
 
 // FOC
 #ifndef MCCONF_FOC_CURRENT_KP
-#define MCCONF_FOC_CURRENT_KP			0.09
+#define MCCONF_FOC_CURRENT_KP			0.2679
 #endif
 #ifndef MCCONF_FOC_CURRENT_KI
-#define MCCONF_FOC_CURRENT_KI			110.0
+#define MCCONF_FOC_CURRENT_KI			92.55
 #endif
 #ifndef MCCONF_FOC_F_SW
 #define MCCONF_FOC_F_SW					16000.0
@@ -306,22 +306,22 @@
 #define MCCONF_FOC_HALL_TAB_0			255
 #endif
 #ifndef MCCONF_FOC_HALL_TAB_1
-#define MCCONF_FOC_HALL_TAB_1			20
+#define MCCONF_FOC_HALL_TAB_1			231
 #endif
 #ifndef MCCONF_FOC_HALL_TAB_2
-#define MCCONF_FOC_HALL_TAB_2			104
+#define MCCONF_FOC_HALL_TAB_2			148
 #endif
 #ifndef MCCONF_FOC_HALL_TAB_3
-#define MCCONF_FOC_HALL_TAB_3			60
+#define MCCONF_FOC_HALL_TAB_3			189
 #endif
 #ifndef MCCONF_FOC_HALL_TAB_4
-#define MCCONF_FOC_HALL_TAB_4			188
+#define MCCONF_FOC_HALL_TAB_4			62
 #endif
 #ifndef MCCONF_FOC_HALL_TAB_5
-#define MCCONF_FOC_HALL_TAB_5			232
+#define MCCONF_FOC_HALL_TAB_5			18
 #endif
 #ifndef MCCONF_FOC_HALL_TAB_6
-#define MCCONF_FOC_HALL_TAB_6			149
+#define MCCONF_FOC_HALL_TAB_6			104
 #endif
 #ifndef MCCONF_FOC_HALL_TAB_7
 #define MCCONF_FOC_HALL_TAB_7			255
@@ -477,7 +477,7 @@
 
 // Setup Info
 #ifndef MCCONF_SI_MOTOR_POLES
-#define MCCONF_SI_MOTOR_POLES			14 // Motor pole count
+#define MCCONF_SI_MOTOR_POLES			15 // Motor pole count
 #endif
 #ifndef MCCONF_SI_GEAR_RATIO
 #define MCCONF_SI_GEAR_RATIO			1 // Gear ratio
@@ -492,7 +492,7 @@
 #define MCCONF_SI_BATTERY_CELLS			10 // Battery Cells
 #endif
 #ifndef MCCONF_SI_BATTERY_AH
-#define MCCONF_SI_BATTERY_AH			6.0 // Battery amp hours
+#define MCCONF_SI_BATTERY_AH			7.5 // Battery amp hours
 #endif
 
 // BMS
