@@ -36,13 +36,13 @@
 
 // Limits
 #ifndef MCCONF_L_CURRENT_MAX
-#define MCCONF_L_CURRENT_MAX			55.0	// Current limit in Amperes (Upper)
+#define MCCONF_L_CURRENT_MAX			70.0	// Current limit in Amperes (Upper)
 #endif
 #ifndef MCCONF_L_CURRENT_MIN
-#define MCCONF_L_CURRENT_MIN			-55.0	// Current limit in Amperes (Lower)
+#define MCCONF_L_CURRENT_MIN			-70.0	// Current limit in Amperes (Lower)
 #endif
 #ifndef MCCONF_L_IN_CURRENT_MAX
-#define MCCONF_L_IN_CURRENT_MAX			20.0	// Input current limit in Amperes (Upper)
+#define MCCONF_L_IN_CURRENT_MAX			25.0	// Input current limit in Amperes (Upper)
 #endif
 #ifndef MCCONF_L_IN_CURRENT_MIN
 #define MCCONF_L_IN_CURRENT_MIN			-10.0	// Input current limit in Amperes (Lower)
@@ -54,7 +54,7 @@
 #define MCCONF_L_MIN_VOLTAGE			8.0		// Minimum input voltage
 #endif
 #ifndef MCCONF_L_MAX_VOLTAGE
-#define MCCONF_L_MAX_VOLTAGE			56.0	// Maximum input voltage
+#define MCCONF_L_MAX_VOLTAGE			60.0	// Maximum input voltage
 #endif
 #ifndef MCCONF_L_BATTERY_CUT_START
 #define MCCONF_L_BATTERY_CUT_START		34.0	// Start limiting the positive current at this voltage
@@ -225,13 +225,13 @@
 
 // FOC
 #ifndef MCCONF_FOC_CURRENT_KP
-#define MCCONF_FOC_CURRENT_KP			0.2679
+#define MCCONF_FOC_CURRENT_KP			0.2119
 #endif
 #ifndef MCCONF_FOC_CURRENT_KI
-#define MCCONF_FOC_CURRENT_KI			92.55
+#define MCCONF_FOC_CURRENT_KI			81.56
 #endif
 #ifndef MCCONF_FOC_F_SW
-#define MCCONF_FOC_F_SW					16000.0
+#define MCCONF_FOC_F_SW					20000.0
 #endif
 #ifndef MCCONF_FOC_DT_US
 #define MCCONF_FOC_DT_US				0.12 // Microseconds for dead time compensation
@@ -255,13 +255,13 @@
 #define MCCONF_FOC_PLL_KI				30000.0
 #endif
 #ifndef MCCONF_FOC_MOTOR_L
-#define MCCONF_FOC_MOTOR_L				0.0001
+#define MCCONF_FOC_MOTOR_L				0.000211
 #endif
 #ifndef MCCONF_FOC_MOTOR_R
-#define MCCONF_FOC_MOTOR_R				0.1
+#define MCCONF_FOC_MOTOR_R				0.081
 #endif
 #ifndef MCCONF_FOC_MOTOR_FLUX_LINKAGE
-#define MCCONF_FOC_MOTOR_FLUX_LINKAGE	0.012
+#define MCCONF_FOC_MOTOR_FLUX_LINKAGE	0.029
 #endif
 #ifndef MCCONF_FOC_MOTOR_LD_LQ_DIFF
 #define MCCONF_FOC_MOTOR_LD_LQ_DIFF		0.0
@@ -312,13 +312,13 @@
 #define MCCONF_FOC_HALL_TAB_2			148
 #endif
 #ifndef MCCONF_FOC_HALL_TAB_3
-#define MCCONF_FOC_HALL_TAB_3			189
+#define MCCONF_FOC_HALL_TAB_3			190
 #endif
 #ifndef MCCONF_FOC_HALL_TAB_4
 #define MCCONF_FOC_HALL_TAB_4			62
 #endif
 #ifndef MCCONF_FOC_HALL_TAB_5
-#define MCCONF_FOC_HALL_TAB_5			18
+#define MCCONF_FOC_HALL_TAB_5			17
 #endif
 #ifndef MCCONF_FOC_HALL_TAB_6
 #define MCCONF_FOC_HALL_TAB_6			104
