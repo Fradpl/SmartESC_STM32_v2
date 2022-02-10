@@ -63,7 +63,7 @@
 #define PHASE_A_V_ADC_CHANNEL                                                MC_ADC_CHANNEL_6
 #define PHASE_B_V_ADC_CHANNEL                                                MC_ADC_CHANNEL_7
 #define PHASE_C_V_ADC_CHANNEL                                                MC_ADC_CHANNEL_9
-#define VOLTAGE_DIVIDER_GAIN     											 (float)2808.6359
+#define VOLTAGE_DIVIDER_GAIN     											 (float)2967.2898
 
 #define VESC_USART_DMA													     huart3
 #define VESC_USART_TX_DMA													 hdma_usart3_tx
@@ -94,11 +94,11 @@
 #define HW_LIM_CURRENT			-70.0, 70.0
 #define HW_LIM_CURRENT_IN		-70.0, 70.0
 #define HW_LIM_CURRENT_ABS		0.0, 100.0
-#define HW_LIM_VIN				6.0, 56.0
+#define HW_LIM_VIN				6.0, 60.0
 #define HW_LIM_ERPM				-100e3, 100e3
 #define HW_LIM_DUTY_MIN			0.0, 0.1
 #define HW_LIM_DUTY_MAX			0.0, 0.99
-#define HW_LIM_TEMP_FET			-40.0, 75.0
+#define HW_LIM_TEMP_FET			-40.0, 85.0
 #define HW_LIM_F_SW			    4000.0, 20000.0
 
 
@@ -119,11 +119,11 @@
 #define MIN_DUTY_FOR_PWM_FREEWHEEL											 80
 #define CURRENT_DISPLAY_OFFSET											     80   //in cnts
 
-#define MODE_SLOW_CURR														 0.5
+#define MODE_SLOW_CURR													 	 0.8
 #define MODE_DRIVE_CURR														 0.8
 #define MODE_SPORT_CURR														 1.0
-#define MODE_SLOW_SPEED														 10
-#define MODE_DRIVE_SPEED													 25
+#define MODE_SLOW_SPEED														 20
+#define MODE_DRIVE_SPEED													 35
 #define MODE_SPORT_SPEED													 KMH_NO_LIMIT
 
 #define BATTERY_VOLTAGE_GAIN     											 ((VOLTAGE_DIVIDER_GAIN * ADC_GAIN) * 512.0)
